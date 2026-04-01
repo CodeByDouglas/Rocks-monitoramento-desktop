@@ -1,13 +1,26 @@
 # Makefile para o Sistema de Monitoramento Rocks
 
-.PHONY: help install dev test prod clean run test-server
+.PHONY: help install dev test prod clean run test-server monitor stop-monitor
 
 # Variáveis
 PYTHON = python
 PIP = pip
 VENV = .venv
-PYTHON_VENV = $(VENV)/Scripts/python
-PIP_VENV = $(VENV)/Scripts/pip
+
+# Detectar sistema operacional e definir caminhos corretos
+ifeq ($(OS),Windows_NT)
+    PYTHON_VENV = $(VENV)/Scripts/python
+    PIP_VENV = $(VENV)/Scripts/pip
+else
+    PYTHON_VENV = $(VENV)/bin/python
+    PIP_VENV = $(VENV)/bin/pip
+endif
+
+# Fallback: usar python diretamente se o venv não existir
+ifeq ($(wildcard $(PYTHON_VENV)),)
+    PYTHON_VENV = python
+    PIP_VENV = pip
+endif
 
 # Comandos padrão
 help:
@@ -19,6 +32,8 @@ help:
 	@echo "  prod        - Executa em modo produção"
 	@echo "  run         - Executa aplicação principal"
 	@echo "  test-server - Inicia servidor de teste"
+	@echo "  monitor     - Inicia monitoramento em background"
+	@echo "  stop-monitor - Para o monitoramento em background"
 	@echo "  clean       - Limpa arquivos temporários"
 	@echo "  format      - Formata código com black"
 	@echo "  lint        - Executa linting com flake8"
@@ -81,6 +96,11 @@ lint:
 monitor:
 	@echo "Iniciando monitoramento em background..."
 	$(PYTHON_VENV) scripts/background_monitor.py
+
+# Parar monitoramento
+stop-monitor:
+	@echo "Parando monitoramento em background..."
+	$(PYTHON_VENV) scripts/stop_monitor.py
 
 # Verificar estrutura
 check:

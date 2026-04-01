@@ -7,6 +7,7 @@ import json
 from typing import Dict, Any, Optional
 from dataclasses import dataclass
 import logging
+from config import API_CONFIG
 
 logger = logging.getLogger(__name__)
 
@@ -25,9 +26,9 @@ class APIClient:
     
     def __init__(
         self,
-        base_url: str = "https://wretched-casket-7vrr9w7rv5q5fxjp5-8000.app.github.dev",
+        base_url: Optional[str] = None,
     ):
-        self.base_url = base_url.rstrip('/')
+        self.base_url = (base_url or API_CONFIG["base_url"]).rstrip('/')
         self.session = requests.Session()
         self.session.headers.update({
             "Content-Type": "application/json",

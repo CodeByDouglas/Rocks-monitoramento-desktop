@@ -479,3 +479,39 @@
 2025-08-29 14:43:41,351 - interface.config_page - INFO - Script de monitoramento iniciado em processo separado
 2025-09-01 18:13:18,921 - __main__ - INFO - Iniciando aplicação de monitoramento Rocks
 2025-09-01 18:13:20,045 - __main__ - INFO - Aplicação iniciada com sucesso
+2025-11-25 19:24:16,310 - __main__ - INFO - Iniciando aplicação de monitoramento Rocks
+2025-11-25 19:24:16,713 - __main__ - INFO - Aplicação iniciada com sucesso
+2025-11-25 19:24:36,309 - interface.workers - INFO - Tentando login - Email: demo@example.com
+2025-11-25 19:24:36,310 - api.api_client - INFO - Tentando login para usuário: demo@example.com - SO: macOS 25.1.0
+2025-11-25 19:24:37,069 - interface.workers - ERROR - Erro no login: Erro HTTP 404
+2025-11-25 19:26:39,608 - __main__ - INFO - Iniciando aplicação de monitoramento Rocks
+2025-11-25 19:26:39,986 - __main__ - INFO - Aplicação iniciada com sucesso
+2025-11-25 19:26:51,142 - interface.workers - INFO - Tentando login - Email: demo@example.com
+2025-11-25 19:26:51,143 - api.api_client - INFO - Tentando login para usuário: demo@example.com - SO: macOS 25.1.0
+2025-11-25 19:26:51,427 - api.auth_service - INFO - Token de autenticação obtido com sucesso
+2025-11-25 19:26:51,427 - api.auth_service - INFO - Tipo de máquina identificado: pc
+2025-11-25 19:26:51,428 - interface.workers - INFO - Login bem-sucedido!
+2025-11-25 19:27:04,642 - interface.workers - INFO - Enviando configuração da máquina para a API
+2025-11-25 19:27:04,642 - api.auth_service - INFO - Enviando configuração da máquina (sem verificação de token)
+2025-11-25 19:27:04,643 - api.auth_service - INFO - Enviando configuração da máquina: {'data': {'Nome': 'MacBook', 'MAC': '0e:1d:1f:4d:bf:1b', 'type': 'pc', 'Notificar': True, 'Frequency': 10, 'iniciarSO': False, 'status': {'DISCO': True, 'REDE': True, 'RAM': True, 'TEMPERATURA': True, 'PROCESSO': True, 'CPU': True}}}
+2025-11-25 19:27:04,643 - api.api_client - INFO - Enviando configuração da máquina para a API
+2025-11-25 19:27:04,681 - interface.workers - INFO - Configuração enviada com sucesso
+2025-11-25 19:27:04,683 - interface.workers - INFO - Configuração salva/atualizada em arquivo: data/configuracao_maquina.json
+2025-11-25 19:27:04,683 - interface.config_page - INFO - Configuração enviada com sucesso - iniciando monitoramento contínuo
+2025-11-25 19:27:04,691 - interface.config_page - INFO - Script de monitoramento iniciado em processo separado
+2025-11-25 19:57:38,042 - __main__ - INFO - Iniciando aplicação de monitoramento Rocks
+2025-11-25 19:57:38,387 - __main__ - INFO - Aplicação iniciada com sucesso
+2025-11-25 20:17:27,258 - api.auth_service - INFO - Token de autenticação carregado do arquivo
+2025-11-25 20:17:27,260 - interface.workers - INFO - Tentando login - Email: demo@example.com
+2025-11-25 20:17:27,260 - api.api_client - INFO - Tentando login para usuário: demo@example.com - SO: macOS 25.1.0
+2025-11-25 20:17:27,541 - api.auth_service - INFO - Token de autenticação obtido com sucesso
+2025-11-25 20:17:27,541 - api.auth_service - INFO - Tipo de máquina identificado: pc
+2025-11-25 20:17:27,542 - interface.workers - INFO - Login bem-sucedido!
+2025-11-25 20:17:58,986 - interface.workers - INFO - Enviando configuração da máquina para a API
+2025-11-25 20:17:58,987 - api.auth_service - INFO - Enviando configuração da máquina (sem verificação de token)
+2025-11-25 20:17:58,987 - api.auth_service - INFO - Enviando configuração da máquina: {'data': {'Nome': 'Mac', 'MAC': '0e:1d:1f:4d:bf:1b', 'type': 'pc', 'Notificar': True, 'Frequency': 10, 'iniciarSO': False, 'status': {'DISCO': True, 'REDE': True, 'RAM': True, 'TEMPERATURA': True, 'PROCESSO': True, 'CPU': True}}}
+2025-11-25 20:17:58,987 - api.api_client - INFO - Enviando configuração da máquina para a API
+2025-11-25 20:17:59,033 - interface.workers - INFO - Configuração enviada com sucesso
+2025-11-25 20:17:59,036 - interface.workers - INFO - Configuração salva/atualizada em arquivo: data/configuracao_maquina.json
+2025-11-25 20:17:59,036 - interface.config_page - INFO - Configuração enviada com sucesso - iniciando monitoramento contínuo
+2025-11-25 20:17:59,042 - interface.config_page - INFO - Script de monitoramento iniciado em processo separado

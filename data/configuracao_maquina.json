@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-08-29T14:43:41.312270",
+  "timestamp": "2025-11-25T20:17:59.035960",
   "machine_info": {
-    "hostname": "Recepcao",
-    "mac_address": "50-A1-32-1E-44-FC",
-    "operating_system": "Windows 11 (11)",
-    "type": "server"
+    "hostname": "MacBook-Air-de-Douglas.local",
+    "mac_address": "0e:1d:1f:4d:bf:1b",
+    "operating_system": "macOS 25.1.0",
+    "type": "pc"
   },
   "configuration": {
-    "machine_name": "Máquina Teste",
+    "machine_name": "Mac",
     "monitored_status": {
       "cpu": true,
       "ram": true,
@@ -18,6 +18,6 @@
     },
     "update_frequency": 10,
     "notifications": true,
-    "start_with_os": true
+    "start_with_os": false
   }
 }

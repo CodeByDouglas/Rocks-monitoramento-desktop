@@ -11,7 +11,7 @@ import platform
 import threading
 from typing import Dict, Optional
 from .api_client import APIClient, APIResponse
-from config import FILE_CONFIG
+from config import FILE_CONFIG, API_CONFIG
 import logging
 
 logger = logging.getLogger(__name__)
@@ -25,7 +25,7 @@ class AuthService:
         api_client: Optional[APIClient] = None,
         auth_state_file: Optional[str] = None,
     ):
-        self.api_client = api_client or APIClient()
+        self.api_client = api_client or APIClient(base_url=API_CONFIG["base_url"])
         self._auth_token: Optional[str] = None
         self._machine_info: Optional[Dict[str, str]] = None
         self._machine_type: Optional[str] = None  # Novo campo para tipo de máquina

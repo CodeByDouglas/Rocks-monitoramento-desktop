@@ -9,7 +9,7 @@ from typing import Dict, Any
 API_CONFIG = {
     "base_url": os.getenv(
         "ROCKS_API_URL",
-        "https://wretched-casket-7vrr9w7rv5q5fxjp5-8000.app.github.dev",
+        "http://localhost:8000",
     ),
     "timeout": 10,
     "user_agent": "Rocks-Monitoramento-Desktop/1.0"
